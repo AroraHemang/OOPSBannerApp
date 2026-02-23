@@ -1,29 +1,35 @@
 /**
- * OOPSBannerApp UC3 - Banner Display Application using String.join()
+ * OOPSBannerApp UC4 - Banner Display Application using String Array and Loop
  *
- * This class demonstrates an improved and memory-efficient approach to rendering
- * the "OOPS" banner by refactoring the string concatenation logic used in UC2.
- * Instead of using the '+' operator to combine multiple string segments, this
- * version utilizes the String.join() method to construct each line of the banner.
+ * This class demonstrates an improved and more modular approach to rendering
+ * the "OOPS" banner by storing all banner lines in a String array and printing
+ * them using a loop. This refactors the UC3 implementation, which relied on
+ * multiple individual print statements.
  *
- * The String.join() method reduces the creation of intermediate String objects,
- * thereby improving memory efficiency and performance while maintaining the
- * same visual output as the previous use case.
+ * By organizing the banner lines into an array and iterating through it using
+ * a loop, the code becomes more maintainable, readable, and reusable. This
+ * approach eliminates repetition and centralizes banner data while preserving
+ * the same visual output as earlier use cases.
  *
- * This use case focuses on code refactoring, readability, and efficient string
- * handling without altering the external behavior of the application.
+ * This use case highlights the use of arrays and loop constructs to improve
+ * code structure without changing the external behavior of the application.
  *
  * @author Hemang Arora
- * @version 3.0
+ * @version 4.0
  */
 public class OOPSBannerApp{
     public static void main (String[] args) {
-        System.out.println(String.join(" ", "   ***   ", "   ***   ", "*******  ", "   ******"));
-        System.out.println(String.join(" ", " **   ** ", " **   ** ", "**     **", " **      "));
-        System.out.println(String.join(" ", "**     **", "**     **", "**     **", "**       "));
-        System.out.println(String.join(" ", "**     **", "**     **", "*******  ", "  *****  "));
-        System.out.println(String.join(" ", "**     **", "**     **", "**       ", "       **"));
-        System.out.println(String.join(" ", " **   ** ", " **   ** ", "**       ", "**    ** "));
-        System.out.println(String.join(" ", "   ***   ", "   ***   ", "**       ", "  *****  "));
+        String[] banner = {
+            String.join(" ", "   ***   ", "   ***   ", "*******  ", "   ******"),
+            String.join(" ", " **   ** ", " **   ** ", "**     **", " **      "),
+            String.join(" ", "**     **", "**     **", "**     **", "**       "),
+            String.join(" ", "**     **", "**     **", "*******  ", "  *****  "),
+            String.join(" ", "**     **", "**     **", "**       ", "       **"),
+            String.join(" ", " **   ** ", " **   ** ", "**       ", "**    ** "),
+            String.join(" ", "   ***   ", "   ***   ", "**       ", "  *****  "),
+        };
+        for (String line : banner) {
+            System.out.println(line);
+        }
     }
 }
