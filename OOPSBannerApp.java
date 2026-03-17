@@ -1,21 +1,14 @@
 /**
- * OOPSBannerApp UC4 - Banner Display Application using String Array and Loop
+ * OOPSBannerApp UC5 - Banner Display Application using Array Initialization
  *
- * This class demonstrates an improved and more modular approach to rendering
- * the "OOPS" banner by storing all banner lines in a String array and printing
- * them using a loop. This refactors the UC3 implementation, which relied on
- * multiple individual print statements.
+ * This version improves the UC4 implementation by initializing the
+ * banner lines directly inside the String array declaration using
+ * String.join(). This makes the code cleaner and easier to maintain.
  *
- * By organizing the banner lines into an array and iterating through it using
- * a loop, the code becomes more maintainable, readable, and reusable. This
- * approach eliminates repetition and centralizes banner data while preserving
- * the same visual output as earlier use cases.
- *
- * This use case highlights the use of arrays and loop constructs to improve
- * code structure without changing the external behavior of the application.
+ * The banner lines are stored in an array and printed using a loop.
  *
  * @author Hemang Arora
- * @version 4.0
+ * @version 5.0
  */
 public class OOPSBannerApp{
     public static void main (String[] args) {
