@@ -1,28 +1,57 @@
 /**
- * OOPSBannerApp UC5 - Banner Display Application using Array Initialization
+ * OOPSBannerApp UC6 - Banner Display using Static Methods for Each Letter
  *
- * This version improves the UC4 implementation by initializing the
- * banner lines directly inside the String array declaration using
- * String.join(). This makes the code cleaner and easier to maintain.
+ * This version improves modularity by defining separate static methods
+ * for each character (O, P, S). Each method is responsible for printing
+ * its respective character using a String array and loop.
  *
- * The banner lines are stored in an array and printed using a loop.
+ * The main method calls these functions sequentially.
  *
  * @author Hemang Arora
- * @version 5.0
+ * @version 6.0
  */
 public class OOPSBannerApp{
-    public static void main (String[] args) {
-        String[] banner = {
-            String.join(" ", "   ***   ", "   ***   ", "*******  ", "   ******"),
-            String.join(" ", " **   ** ", " **   ** ", "**     **", " **      "),
-            String.join(" ", "**     **", "**     **", "**     **", "**       "),
-            String.join(" ", "**     **", "**     **", "*******  ", "  *****  "),
-            String.join(" ", "**     **", "**     **", "**       ", "       **"),
-            String.join(" ", " **   ** ", " **   ** ", "**       ", "**    ** "),
-            String.join(" ", "   ***   ", "   ***   ", "**       ", "  *****  "),
+    public static String[] getOPattern(){
+        return new String[] {
+            "   ***   ",
+            " **   ** ",
+            "**     **",
+            "**     **",
+            "**     **",
+            " **   ** ",
+            "   ***   ",
         };
-        for (String line : banner) {
-            System.out.println(line);
+    }
+
+    public static String[] getPPattern(){
+        return new String[] {
+            "*******  ",
+            "**     **",
+            "**     **",
+            "*******  ",
+            "**       ",
+            "**       ",
+            "**       ",
+        };
+    }
+
+    public static String[] getSPattern(){
+        return new String[] {
+            "   ******",
+            " **      ",
+            "**       ",
+            "  *****  ",
+            "       **",
+            "**    ** ",
+            "  *****  ",
+        };
+    }
+    public static void main (String[] args) {
+        String[] oPattern = getOPattern();
+        String[] pPattern = getPPattern();
+        String[] sPattern = getSPattern();
+        for (int i = 0; i < oPattern.length; i++) {
+            System.out.println(oPattern[i] + "  " + oPattern[i] + "  " + pPattern[i] + "  " + sPattern[i]);
         }
     }
 }
